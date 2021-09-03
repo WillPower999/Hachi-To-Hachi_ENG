@@ -42,6 +42,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         {
             cameraTransform = Camera.main.transform;
             mover.canClimbSteepSlope = true;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         private void Update()

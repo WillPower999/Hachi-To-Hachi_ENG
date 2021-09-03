@@ -6,9 +6,9 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
     {
         public Transform target;
 
-        public float distance = 5f;
+        public float distance = 10f;
 
-        public float sensitivity = 100f;
+        public float sensitivity = 90f;
 
         private float yRot = 0f;
 

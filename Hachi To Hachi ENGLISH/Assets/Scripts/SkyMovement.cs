@@ -7,7 +7,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 {
     public class SkyMovement : MonoBehaviour
     {
-        public float moveSpeed = 10f;
+        public float moveSpeed = 12f;
 
         //public Vector3 velocity;
 

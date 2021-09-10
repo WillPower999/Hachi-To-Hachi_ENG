@@ -14,6 +14,9 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         public Transform octoTarget;
         public Transform beeTarget;
 
+        public GameObject beeBody;
+        public GameObject beeHead;
+
         public Camera targetCamera;
 
         // Start is called before the first frame update
@@ -33,6 +36,11 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
                     movementMode = "Sky";
                     Octo.GetComponent<SimpleCharacterController>().enabled = false;
                     Bee.GetComponent<SkyMovement>().enabled = true;
+
+                    beeBody.GetComponent<SphereCollider>().enabled = true;
+                    beeHead.GetComponent<BoxCollider>().enabled = true;
+                    //Bee.gameObject.GetComponent<SphereCollider>().enabled = true;
+                    //Bee.gameObject.GetComponent<BoxCollider>().enabled = true;
                 }
                 else if (movementMode == "Sky")
                 {
@@ -40,6 +48,11 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
                     movementMode = "Land";
                     Octo.GetComponent<SimpleCharacterController>().enabled = true;
                     Bee.GetComponent<SkyMovement>().enabled = false;
+
+                    beeBody.GetComponent<SphereCollider>().enabled = false;
+                    beeHead.GetComponent<BoxCollider>().enabled = false;
+                    //Bee.gameObject.GetComponent<SphereCollider>().enabled = false;
+                    //Bee.gameObject.GetComponent<BoxCollider>().enabled = false;
                 }
             }
         }

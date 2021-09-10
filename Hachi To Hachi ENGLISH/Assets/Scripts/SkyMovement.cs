@@ -7,7 +7,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 {
     public class SkyMovement : MonoBehaviour
     {
-        public float moveSpeed = 8f;
+        public float moveSpeed = 10f;
 
         //public Vector3 velocity;
 
@@ -31,12 +31,25 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
             x = Input.GetAxis("Horizontal");
             z = Input.GetAxis("Vertical");
 
-            Vector3 forward = Vector3.ProjectOnPlane(cameraTransform.forward, transform.up).normalized;
+            Vector3 forward = cameraTransform.forward;
+                //Vector3.ProjectOnPlane(cameraTransform.forward, transform.up).normalized;
             Vector3 right = Vector3.Cross(transform.up, forward);
 
             Vector3 move = right * x + forward * z;
             Bee.transform.position = Bee.transform.position + (move * moveSpeed * Time.deltaTime);
 
+            RotateTowards(cameraTransform.forward);
+        }
+
+        private void RotateTowards(Vector3 direction)
+        {
+            Vector3 faceDirection = Vector3.ProjectOnPlane(direction, transform.up);
+
+            if (faceDirection.sqrMagnitude < 1E-06f)
+                return;
+
+            Quaternion finalRotation = Quaternion.LookRotation(faceDirection, transform.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, finalRotation, 720f * Time.deltaTime);
         }
 
         /*public float moveSpeed = 5f;

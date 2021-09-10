@@ -37,6 +37,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         
         private List<MoveContact> moveContacts = new List<MoveContact>(10);
 
+        public GameObject bee;
 
         private void Start()
         {
@@ -48,6 +49,10 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         private void Update()
         {
             UpdateMovement(GetMovementDirection(), Time.deltaTime);
+            if (bee != null)
+            {
+                bee.transform.position = this.gameObject.transform.position + new Vector3(0f, 2.5f, 0f);
+            }
         }
 
         private void UpdateMovement(Vector3 moveDirection, float deltaTime)

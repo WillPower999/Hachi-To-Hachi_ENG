@@ -28,7 +28,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         private const float timeBeforeUngrounded = 0.02f;
 
         // Speed along the character local up direction.
-        private float verticalSpeed = 0f;
+        public float verticalSpeed = 0f;
 
         // Time after which the character should be considered ungrounded.
         private float nextUngroundedTime = -1f;
@@ -111,7 +111,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
             return x * right + y * forward;
         }
 
-        private bool DetectGroundAndCheckIfGrounded(out bool isGrounded, out GroundInfo groundInfo)
+        public bool DetectGroundAndCheckIfGrounded(out bool isGrounded, out GroundInfo groundInfo)
         {
             bool groundDetected = groundDetector.DetectGround(out groundInfo);
 

@@ -19,10 +19,12 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 
         public Camera targetCamera;
 
+        public SimpleCharacterController playerScript;
+
         // Start is called before the first frame update
         void Start()
         {
-
+            playerScript = Octo.GetComponent<SimpleCharacterController>();
         }
 
         // Update is called once per frame
@@ -30,7 +32,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         {
             if (Input.GetKeyDown(KeyCode.V))
             {
-                if (movementMode == "Land")
+                if (movementMode == "Land" && playerScript.verticalSpeed == 0f)
                 {
                     targetCamera.gameObject.GetComponent<OrbitingCamera>().target = beeTarget;
                     movementMode = "Sky";

@@ -9,17 +9,17 @@ C:\Program Files\Unity\Hub\Editor\2021.1.16f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker1
+AssetImportWorker3
 -projectPath
 C:/Users/willi/OneDrive/Documents/GitHub/Hachi-To-Hachi_ENG/Hachi To Hachi ENGLISH
 -logFile
-Logs/AssetImportWorker1.log
+Logs/AssetImportWorker3.log
 -srvPort
-50308
+63771
 Successfully changed project path to: C:/Users/willi/OneDrive/Documents/GitHub/Hachi-To-Hachi_ENG/Hachi To Hachi ENGLISH
 C:/Users/willi/OneDrive/Documents/GitHub/Hachi-To-Hachi_ENG/Hachi To Hachi ENGLISH
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 230.73 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 85.31 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.16f1 (5fa502fca597)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/Resources/UnitySubsystems
@@ -35,46 +35,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56980
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56044
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.011284 seconds.
+Registered in 0.419754 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 237.46 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 113.41 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  6.101 seconds
+- Completed reload, in  3.870 seconds
 Domain Reload Profiling:
-	ReloadAssembly (6102ms)
-		BeginReloadAssembly (319ms)
+	ReloadAssembly (3870ms)
+		BeginReloadAssembly (75ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (4ms)
-		EndReloadAssembly (1347ms)
-			LoadAssemblies (307ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (519ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (1432ms)
+			LoadAssemblies (101ms)
+			RebuildTransferFunctionScriptingTraits (12ms)
+			SetupTypeCache (788ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (82ms)
-			SetupLoadedEditorAssemblies (620ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (377ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (22ms)
+				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (238ms)
-				BeforeProcessingInitializeOnLoad (5ms)
-				ProcessInitializeOnLoadAttributes (272ms)
-				ProcessInitializeOnLoadMethodAttributes (82ms)
+				RefreshPlugins (113ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (152ms)
+				ProcessInitializeOnLoadMethodAttributes (98ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (4ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.015314 seconds.
+Registered in 1.799088 seconds.

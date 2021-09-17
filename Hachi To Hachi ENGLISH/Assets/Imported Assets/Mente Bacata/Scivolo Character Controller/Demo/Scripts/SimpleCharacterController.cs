@@ -8,7 +8,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 {
     public class SimpleCharacterController : MonoBehaviour
     {
-        public float moveSpeed = 5f;
+        public float moveSpeed = 8f;
 
         public float jumpSpeed = 8f;
         
@@ -147,6 +147,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 
             Quaternion rotazioneObbiettivo = Quaternion.LookRotation(direzioneOrizz, transform.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rotazioneObbiettivo, rotationSpeed * Time.deltaTime);
+            bee.transform.rotation = Quaternion.RotateTowards(transform.rotation, rotazioneObbiettivo, rotationSpeed * Time.deltaTime);
         }
 
         private PlatformDisplacement GetPlatformDisplacementAtPoint(MovingPlatform platform, Vector3 point)

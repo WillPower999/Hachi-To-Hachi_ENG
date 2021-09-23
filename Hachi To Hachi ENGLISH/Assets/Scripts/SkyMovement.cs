@@ -54,16 +54,18 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         {
             if (other.gameObject.layer == 4)
             {
-                other.isTrigger = false;
+                //other.isTrigger = false;
+                Bee.GetComponent<Rigidbody>().transform.position = Bee.GetComponent<Rigidbody>().transform.position + new Vector3(0f, 1f, 0f);
+                Bee.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
             }
         }
 
-        private void OnTriggerExit(Collider other)
+        /*private void OnTriggerExit(Collider other)
         {
             if (other.gameObject.layer == 4)
             {
                 other.isTrigger = true;
             }
-        }
+        }*/
     }
 }

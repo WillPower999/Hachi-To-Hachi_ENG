@@ -142,15 +142,3 @@ Received Import Request.
   path: Assets/Prefabs/House.prefab
   artifactKey: Guid(dd72120ffeffb484bb5871e4f4a39024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Prefabs/House.prefab using Guid(dd72120ffeffb484bb5871e4f4a39024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c6224bd8a4fb03902e837185fa15a83') in 0.249546 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 69959.822601 seconds.
-  path: Assets/Scenes/beta_level.unity
-  artifactKey: Guid(79e6ecc75239b7b4098c02fb49095573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/beta_level.unity using Guid(79e6ecc75239b7b4098c02fb49095573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5773b585d76c3f2b8ab8240527f16c2d') in 0.066547 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1269.264543 seconds.
-  path: Assets/Scenes/beta_eitto.unity
-  artifactKey: Guid(137b99c17ce0a72498e69673e9398a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/beta_eitto.unity using Guid(137b99c17ce0a72498e69673e9398a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1eb71ef98f2282f260e0f27e9fd2721') in 0.012430 seconds 

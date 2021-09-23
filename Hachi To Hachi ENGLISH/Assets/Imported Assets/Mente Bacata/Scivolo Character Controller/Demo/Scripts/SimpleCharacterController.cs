@@ -8,7 +8,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 {
     public class SimpleCharacterController : MonoBehaviour
     {
-        public float moveSpeed = 5f;
+        public float moveSpeed = 8f;
 
         public float jumpSpeed = 8f;
         
@@ -28,7 +28,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         private const float timeBeforeUngrounded = 0.02f;
 
         // Speed along the character local up direction.
-        private float verticalSpeed = 0f;
+        public float verticalSpeed = 0f;
 
         // Time after which the character should be considered ungrounded.
         private float nextUngroundedTime = -1f;
@@ -37,16 +37,22 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         
         private List<MoveContact> moveContacts = new List<MoveContact>(10);
 
+        public GameObject bee;
 
         private void Start()
         {
             cameraTransform = Camera.main.transform;
             mover.canClimbSteepSlope = true;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         private void Update()
         {
             UpdateMovement(GetMovementDirection(), Time.deltaTime);
+            if (bee != null)
+            {
+                bee.transform.position = this.gameObject.transform.position + new Vector3(0f, 2.5f, 0f);
+            }
         }
 
         private void UpdateMovement(Vector3 moveDirection, float deltaTime)
@@ -105,7 +111,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
             return x * right + y * forward;
         }
 
-        private bool DetectGroundAndCheckIfGrounded(out bool isGrounded, out GroundInfo groundInfo)
+        public bool DetectGroundAndCheckIfGrounded(out bool isGrounded, out GroundInfo groundInfo)
         {
             bool groundDetected = groundDetector.DetectGround(out groundInfo);
 
@@ -141,6 +147,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 
             Quaternion rotazioneObbiettivo = Quaternion.LookRotation(direzioneOrizz, transform.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rotazioneObbiettivo, rotationSpeed * Time.deltaTime);
+            bee.transform.rotation = Quaternion.RotateTowards(transform.rotation, rotazioneObbiettivo, rotationSpeed * Time.deltaTime);
         }
 
         private PlatformDisplacement GetPlatformDisplacementAtPoint(MovingPlatform platform, Vector3 point)

@@ -6,9 +6,9 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
     {
         public Transform target;
 
-        public float distance = 5f;
+        public float distance = 10f;
 
-        public float sensitivity = 100f;
+        public float sensitivity = 90f;
 
         private float yRot = 0f;
 
@@ -26,7 +26,8 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         {
             yRot += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
             xRot -= Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
-            xRot = Mathf.Clamp(xRot, 0f, 75f);
+
+            xRot = Mathf.Clamp(xRot, -75f, 75f);
 
             Quaternion worldRotation = transform.parent != null ? transform.parent.rotation : Quaternion.FromToRotation(Vector3.up, target.up);
             Quaternion cameraRotation = worldRotation * Quaternion.Euler(xRot, yRot, 0f);

@@ -439,6 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   images:
+  - {fileID: 21300000, guid: 8c088ae433d02d64cb332317413b1309, type: 3}
   - {fileID: 21300000, guid: 83d70e23888bb5e44b69d2305abc3277, type: 3}
   - {fileID: 21300000, guid: 2d294cbd4cb37d945a3e1b7882e93e8b, type: 3}
   - {fileID: 21300000, guid: faf7212c93146174d92b2b7285225513, type: 3}
@@ -450,6 +451,7 @@ MonoBehaviour:
   image: {fileID: 1357406093}
   text: {fileID: 400973613}
   cover: {fileID: 1531921974}
+  _time: 4
   button: {fileID: 1917612816}
 --- !u!114 &1267050732
 MonoBehaviour:

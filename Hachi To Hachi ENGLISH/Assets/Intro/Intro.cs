@@ -13,6 +13,7 @@ public class Intro : MonoBehaviour
     public Image image;
     public TextMeshProUGUI text;
     public Image cover;
+    public int _time;
 
     public Button button;
 
@@ -28,7 +29,7 @@ public class Intro : MonoBehaviour
 
     private IEnumerator ShowSlides()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(_time);
         _index++;
         if (_index == images.Count)
         {

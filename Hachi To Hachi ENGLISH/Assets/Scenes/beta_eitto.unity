@@ -6161,7 +6161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b51af08aae8eb74fb883516270dfe1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 30
+  moveSpeed: 50
   x: 0
   z: 0
   Bee: {fileID: 914193894}
@@ -11435,10 +11435,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1b5e4422bc7034ab40da860e2982ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
+  moveSpeed: 42
   x: 0
   z: 0
-  Octo: {fileID: 0}
+  Octo: {fileID: 1619003136}
 --- !u!114 &1619003139 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2573877700867721432, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}

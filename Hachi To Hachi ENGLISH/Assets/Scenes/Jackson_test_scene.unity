@@ -444,11 +444,6 @@ Transform:
   m_Father: {fileID: 1684023233}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &494059795 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2573877701323496184, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
-  m_PrefabInstance: {fileID: 1086795902}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &510254675
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,22 +807,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2573877700867721438, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
   m_PrefabInstance: {fileID: 1086795902}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1045832472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045832466}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a1b5e4422bc7034ab40da860e2982ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 42
-  x: 0
-  z: 0
-  Octo: {fileID: 1045832466}
 --- !u!1 &1047651938
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,26 +910,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2573877700867721428, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
-      propertyPath: clampToFloor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2573877700867721428, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
-      propertyPath: canClimbSteepSlope
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 2119006273, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
+      propertyPath: Bee
+      value: 
+      objectReference: {fileID: 1684023232}
+    - target: {fileID: 2119006273, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
+      propertyPath: beeBody
+      value: 
+      objectReference: {fileID: 592324154}
+    - target: {fileID: 2119006273, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
+      propertyPath: beeHead
+      value: 
+      objectReference: {fileID: 510254675}
+    - target: {fileID: 2119006273, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
+      propertyPath: beeTarget
+      value: 
+      objectReference: {fileID: 402223510}
+    - target: {fileID: 2119006273, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
+      propertyPath: targetCamera
+      value: 
+      objectReference: {fileID: 136443595}
     - target: {fileID: 2573877700867721432, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
       propertyPath: bee
       value: 
       objectReference: {fileID: 1684023232}
-    - target: {fileID: 2573877700867721432, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2573877700867721432, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
-      propertyPath: moveSpeed
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 2573877700867721438, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
       propertyPath: m_Name
       value: My Character
@@ -1401,7 +1384,7 @@ GameObject:
   - component: {fileID: 1684023235}
   m_Layer: 0
   m_Name: BeeHachi
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1684,72 +1667,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080391669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9662032279b79e14094c8ee035e4a375, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementMode: Land
-  Octo: {fileID: 1045832466}
-  Bee: {fileID: 1684023232}
-  octoTarget: {fileID: 1566944711}
-  beeTarget: {fileID: 402223510}
-  beeBody: {fileID: 592324154}
-  beeHead: {fileID: 510254675}
-  targetCamera: {fileID: 136443595}
-  playerScript: {fileID: 0}
---- !u!1 &2119006270
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2119006271}
-  - component: {fileID: 2119006272}
-  - component: {fileID: 2119006273}
-  m_Layer: 0
-  m_Name: WaterDetector
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2119006271
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119006270}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 494059795}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &2119006272
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119006270}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.32
-  m_Center: {x: 0, y: 0.2, z: 0}
---- !u!114 &2119006273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119006270}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9662032279b79e14094c8ee035e4a375, type: 3}

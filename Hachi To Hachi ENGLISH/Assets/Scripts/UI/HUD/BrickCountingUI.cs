@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BrickCountingUI : MonoBehaviour
 {
+    public static BrickCountingUI Instance;
+
     public Text counter;
     BrickCounter brickcounter;
     int bricks;
@@ -12,11 +14,19 @@ public class BrickCountingUI : MonoBehaviour
 
     private void Start()
     {
+        Instance = this;
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
     }
     // Update is called once per frame
-    void Update()
+ /*   void Update()
+    {
+        bricks = playerStats.brickcount;
+
+        counter.text = "X " + bricks;
+    }*/
+
+    public void UpdateUI()
     {
         bricks = playerStats.brickcount;
 

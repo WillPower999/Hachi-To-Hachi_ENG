@@ -23,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
     public void gainBrick()
     {
         brickcount += 1;
+        BrickCountingUI.Instance.UpdateUI();
     }
 }
 

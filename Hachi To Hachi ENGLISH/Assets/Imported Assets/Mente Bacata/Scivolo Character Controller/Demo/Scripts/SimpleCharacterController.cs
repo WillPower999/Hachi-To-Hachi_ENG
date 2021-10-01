@@ -51,7 +51,8 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
             UpdateMovement(GetMovementDirection(), Time.deltaTime);
             if (bee != null)
             {
-                bee.transform.position = this.gameObject.transform.position + new Vector3(0f, 2.5f, 0f);
+                //bee.transform.position = this.gameObject.transform.position + new Vector3(0f, 2.5f, 0f);
+                bee.transform.position = Vector3.MoveTowards(bee.transform.position, this.gameObject.transform.position + new Vector3(0f, 2.5f, 0f), 20f * Time.deltaTime);
             }
         }
 

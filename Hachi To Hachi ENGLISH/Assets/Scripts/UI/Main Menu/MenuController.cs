@@ -9,6 +9,7 @@ public class MenuController : MonoBehaviour
     [Header("Levels to Load")]
     public string _newGameLevel;
     private string levelToLoad;
+    [SerializeField] private GameObject noSavedGameDialogue = null;
 
     public void NewGameDialogueYes()
     {
@@ -17,6 +18,20 @@ public class MenuController : MonoBehaviour
 
     public void LoadGameDialogueYes()
     {
-        levelToLoad = 
+        /*if(there are saved files)
+        {
+        then ask which one;
+        }
+        else
+        {
+        NoSavePanel_Dialogue.SetActive(true);
+        }
+        */
     }
+
+    public void ExitButton()
+    {
+        Application.Quit();
+    }
+
 }

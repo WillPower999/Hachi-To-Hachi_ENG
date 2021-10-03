@@ -466,7 +466,6 @@ GameObject:
   - component: {fileID: 2573877700867721432}
   - component: {fileID: 1045832467}
   - component: {fileID: 1045832472}
-  - component: {fileID: 1619003137}
   m_Layer: 0
   m_Name: MyCharacter
   m_TagString: Player
@@ -571,25 +570,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkShot: {fileID: 504217460117297015, guid: 2efcf2f7a86e2024197a6e140a010058, type: 3}
+  movement: {fileID: 2119006270}
   velocity: 20
   meleeBox: {fileID: 1638341663}
 --- !u!114 &1045832472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2573877700867721438}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a1b5e4422bc7034ab40da860e2982ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 42
-  x: 0
-  z: 0
-  Octo: {fileID: 2573877700867721438}
---- !u!114 &1619003137
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

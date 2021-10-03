@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   honeyDrop: {fileID: 954655641603979965, guid: c1955fd4198b06b4198ec084d29520fe, type: 3}
+  movement: {fileID: 0}
   velocity: 20
 --- !u!1 &5723230743429469300
 GameObject:

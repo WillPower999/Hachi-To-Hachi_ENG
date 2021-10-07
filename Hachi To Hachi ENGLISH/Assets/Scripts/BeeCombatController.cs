@@ -10,6 +10,8 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         public GameObject movement;
         public float velocity = 20f;
 
+        public GameObject meleeBox;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -27,6 +29,18 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
                                                           transform.rotation);
                 projectile.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward * velocity);
             }
+
+            if (Input.GetMouseButtonDown(0) && mode == "Sky")
+            {
+                StartCoroutine(hitTime());
+            }
+        }
+
+        IEnumerator hitTime()
+        {
+            meleeBox.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            meleeBox.SetActive(false);
         }
     }
 }

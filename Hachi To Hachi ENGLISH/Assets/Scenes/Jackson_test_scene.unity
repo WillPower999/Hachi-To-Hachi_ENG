@@ -1662,6 +1662,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1923230399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8493404472741636361, guid: f02cbdc8b96f6264590b3359bc2647ad, type: 3}
+  m_PrefabInstance: {fileID: 5723230743640679905}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5723230743640679905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1717,6 +1722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BeeHachi
       objectReference: {fileID: 0}
+    - target: {fileID: 5723230743168811557, guid: f02cbdc8b96f6264590b3359bc2647ad, type: 3}
+      propertyPath: meleeBox
+      value: 
+      objectReference: {fileID: 1923230399}
     - target: {fileID: 5723230743168811557, guid: f02cbdc8b96f6264590b3359bc2647ad, type: 3}
       propertyPath: movement
       value: 

@@ -5,24 +5,26 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public HealthBar healthbar;
-    public int health = 5;
-    public int maxhealth = 5;
-    public int brickcount = 0;
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        GlobalGameState.currentGame.health -= damage;
     }
 
     public void GainHealth(int heal)
     {
-        health = Mathf.Min(health + heal, maxhealth);
+        GlobalGameState.currentGame.health = Mathf.Min(GlobalGameState.currentGame.health + heal, GlobalGameState.currentGame.maxhealth);
         healthbar.UpdateUI();
     }
-
+    public void GainGTakoyaki()
+    {
+        GlobalGameState.currentGame.gDaifukucount++;
+        if(GlobalGameState.currentGame.gDaifukucount %4 == 0)
+            GlobalGameState.currentGame.maxhealth++;
+    }
     public void gainBrick()
     {
-        brickcount += 1;
+        GlobalGameState.currentGame.brickcount += 1;
         BrickCountingUI.Instance.UpdateUI();
     }
 }

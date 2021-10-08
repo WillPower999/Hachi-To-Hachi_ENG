@@ -26,8 +26,8 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     public void UpdateUI()
     {
-        health = playerHealth.health;
-        maxhealth = playerHealth.maxhealth;
+        health = GlobalGameState.currentGame.health;
+        maxhealth = GlobalGameState.currentGame.maxhealth;
 
         for (int index = 0; index < MAXPOSSHP; index++)
         {

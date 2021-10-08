@@ -28,7 +28,7 @@ public class BrickCountingUI : MonoBehaviour
 
     public void UpdateUI()
     {
-        bricks = playerStats.brickcount;
+        bricks = GlobalGameState.currentGame.brickcount;
 
         counter.text = "X " + bricks;
     }

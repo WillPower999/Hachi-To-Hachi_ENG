@@ -7,7 +7,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 {
     public class SkyMovement : MonoBehaviour
     {
-        public float moveSpeed = 12f;
+        public float moveSpeed = 50f;
 
         public float x;
         public float z;
@@ -23,7 +23,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
 
             x = Input.GetAxis("Horizontal");

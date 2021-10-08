@@ -39,6 +39,8 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 
         public GameObject bee;
 
+        public float diff = 0;
+
         private void Start()
         {
             cameraTransform = Camera.main.transform;
@@ -51,7 +53,9 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
             UpdateMovement(GetMovementDirection(), Time.deltaTime);
             if (bee != null)
             {
-                bee.transform.position = this.gameObject.transform.position + new Vector3(0f, 2.5f, 0f);
+                diff = Vector3.Distance(this.gameObject.transform.position, bee.transform.position);
+                diff = diff / 200;
+                bee.transform.position = Vector3.MoveTowards(bee.transform.position, this.gameObject.transform.position + new Vector3(0f, 2.5f, 0f), 20f * Time.deltaTime + diff);
             }
         }
 

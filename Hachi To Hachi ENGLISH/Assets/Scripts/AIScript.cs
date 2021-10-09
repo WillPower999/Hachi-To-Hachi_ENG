@@ -7,6 +7,49 @@ public class AIScript : MonoBehaviour
 {
     public float lookRadius = 10f;
 
+    public Transform target;
+    NavMeshAgent agent;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //target = PlayerManager.instance.player.transform;
+        agent = GetComponent<NavMeshAgent>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        float distance = Vector3.Distance(target.position, transform.position);
+
+        if (distance <= lookRadius)
+        {
+            agent.SetDestination(target.position);
+
+            if (distance <= agent.stoppingDistance)
+            {
+                FaceTarget();
+                //attack
+            }
+        }
+    }
+
+    void FaceTarget()
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
+
+    
+    /*public float lookRadius = 10f;
+
     //public Animator animator;
 
     private int playerDetectedID;
@@ -39,10 +82,10 @@ public class AIScript : MonoBehaviour
             agent.SetDestination(target.position);
             //animator.SetBool(playerDetectedID, true);
 
-            /*if (!FindObjectOfType<PlayerDetectedSound>())
+            if (!FindObjectOfType<PlayerDetectedSound>())
             {
                 Instantiate(playerDetectedPrefab, gameObject.transform.position + gameObject.transform.up * 0.75f, gameObject.transform.rotation, null);
-            }*/
+            }
 
             if (distance <= agent.stoppingDistance)
             {
@@ -66,18 +109,18 @@ public class AIScript : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
-    /*void OnDrawGizmosSelected()
+   void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
-    }*/
+    }
 
-    /*void FiringLocation()
+    void FiringLocation()
     {
         agent.SetDestination(PlayerManager.instance.player.transform.position);
-    }*/
+    }
 
-    /*void Attack()
+    void Attack()
     {
         if (attackCooldown == 10)
         {
@@ -89,4 +132,5 @@ public class AIScript : MonoBehaviour
             attackCooldown++;
         }
     }*/
+    
 }

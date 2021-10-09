@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8437083948498995123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8437083948498995121}
+  - component: {fileID: 8437083948498995120}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8437083948498995121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437083948498995123}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8437083948498995120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437083948498995123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81f0531f98bb346868edf2f6360882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundEffects:
+  - _soundOption: 0
+    _clip: {fileID: 8300000, guid: efc9139c6b508a744b0da0734108f34c, type: 3}
+  - _soundOption: 1
+    _clip: {fileID: 8300000, guid: c2c8c465c28b2d841917d9e71da2bef2, type: 3}
+  - _soundOption: 2
+    _clip: {fileID: 8300000, guid: fb8cf569a96da0d4eae38f7d8fed8f17, type: 3}
+  _musicTracks:
+  - _musicOption: 0
+    _track: {fileID: 8300000, guid: 227d8c65077bcfd478843bc564ce02fd, type: 3}
+  - _musicOption: 1
+    _track: {fileID: 8300000, guid: e5f7cd3e50a589e4fb6f1addb895501c, type: 3}
+  - _musicOption: 2
+    _track: {fileID: 8300000, guid: 3787c7bc60933544f8d96009601e7216, type: 3}
+  - _musicOption: 3
+    _track: {fileID: 8300000, guid: b102fc5c81227f24b89eec45876e3cc6, type: 3}
+  - _musicOption: 4
+    _track: {fileID: 8300000, guid: cbc76b82f8ebd034ca3980ecd9cd89e2, type: 3}
+  - _musicOption: 5
+    _track: {fileID: 8300000, guid: 8ab8b32d7ea9e8342a9a68ed6fac71f7, type: 3}
+  - _musicOption: 6
+    _track: {fileID: 8300000, guid: 19353388a6a8d9b4eae5d002730ea9d0, type: 3}
+  - _musicOption: 7
+    _track: {fileID: 8300000, guid: cbd05bb26af281045b57df1d1d394703, type: 3}
+  - _musicOption: 8
+    _track: {fileID: 8300000, guid: 03fef43ce76cf914e8c5c34fd0da8e90, type: 3}
+  _numSoundEffectSources: 5

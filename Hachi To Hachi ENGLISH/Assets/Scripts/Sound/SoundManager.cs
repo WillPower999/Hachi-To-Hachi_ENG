@@ -118,10 +118,6 @@ public sealed class SoundManager : MonoBehaviour {
     }
 
     public void PlayMusicCrossFaded(Music track, float crossFadeTime) {
-        if(crossFadeTime == 0f) {
-            throw new Exception("Must provide crossFadeTime > 0f when playing music with crossfade");
-        }
-
         playMusicOnNextSource(track);
 
         _bgmStartCrossFadeTime = Time.time;

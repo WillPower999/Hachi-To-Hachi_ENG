@@ -18,7 +18,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         {
 #if UNITY_EDITOR
             // Somehow after updating to 2019.3, mouse axes sensitivity decreased, but only in the editor.
-            sensitivity *= 10f;
+            //sensitivity *= 10f;
 #endif
         }
 

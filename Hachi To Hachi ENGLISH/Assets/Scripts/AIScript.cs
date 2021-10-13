@@ -61,7 +61,7 @@ public class AIScript : MonoBehaviour
         hitbox.SetActive(true);
         yield return new WaitForSeconds(0.1f);
         hitbox.SetActive(false);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         timeToHit = true;
     }
 }

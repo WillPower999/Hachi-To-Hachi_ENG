@@ -15,6 +15,7 @@ public class dealDamage : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             GlobalGameState.currentGame.health--;
+            Debug.Log(GlobalGameState.currentGame.health);
         }
     }
 }

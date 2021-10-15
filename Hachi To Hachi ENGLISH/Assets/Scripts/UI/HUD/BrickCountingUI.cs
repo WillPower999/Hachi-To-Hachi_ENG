@@ -10,12 +10,11 @@ public class BrickCountingUI : MonoBehaviour
     public Text counter;
     BrickCounter brickcounter;
     int bricks;
-    PlayerHealth playerStats;
 
     private void Start()
     {
         Instance = this;
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+       // playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
     }
     // Update is called once per frame

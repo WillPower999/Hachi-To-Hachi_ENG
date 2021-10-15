@@ -26,7 +26,7 @@ public class GameSave
 
     //location
     public Vector3 checkpointlocation;
-    public string currentlevel;
+    public string scene;
 
     //ammo
     public int inkammo;
@@ -35,10 +35,26 @@ public class GameSave
     //instantiation
     public void setupNewGame()
     {
-            gDaifukucount = 0;
-            health = 5;
-            maxhealth = 5;
-            brickcount = 0;
+        gDaifukucount = 0;
+        health = 5;
+        maxhealth = 5;
+        bricks = new bool[6];
+        brickcount = 0;
+        for (int i = 0; i < bricks.Length; i++) bricks[i] = false;
+        squealcount = 0;
+        squeals = new bool[3];
+        for (int i = 0; i < squeals.Length; i++) squeals[i] = false;
+        orb = false;
+        gDaifukucount = 0;
+        gDaifuku = new bool[5];
+        for (int i = 0; i < gDaifuku.Length; i++) gDaifuku[i] = false;
+        checkpointlocation.x = 0;
+        checkpointlocation.y = 0;
+        checkpointlocation.z = 0;
+        scene = "beta_eitto";
+        inkammo = 0;
+        honeyammo = 0;
+
     }
 }
 

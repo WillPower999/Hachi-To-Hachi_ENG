@@ -7,11 +7,13 @@ using System.IO;
 
 public class MenuController : MonoBehaviour
 {
-    [Header("Levels to Load")]
     public string _newGameLevel;
-    private string levelToLoad;
+    [Header("Pop Up Menus")]
+    public GameObject ExistingFileMenu;
+    public GameObject NewFileMenu;
     [SerializeField] private GameObject noSavedGameDialogue = null;
     [SerializeField] private SaveSlotButton[] savebuttons;
+
 
     public void Start()
     {
@@ -43,17 +45,28 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
     }
+    /*
+    public void GameExists(int index)
+    {
+        ExistingFileMenu.SetActive(true);
+    }
 
+    public void GameNotExist(int index)
+    {
+        NewFileMenu.SetActive(true);
+    }
+    */
     public void CreateGame(int index)
     {
         Debug.Log("Create Game" + index);
         GameSave newGame = new GameSave();
         newGame.SaveSlotIndex = index;
         newGame.setupNewGame();
-        //set initial game stats
         string json = JsonUtility.ToJson(newGame);
         File.WriteAllText($"{Application.persistentDataPath}/save{index}.json", json);
         GlobalGameState.currentGame = newGame;
+        Debug.Log(_newGameLevel);
+        SceneManager.LoadScene(_newGameLevel);
     }
 
     public void LoadGame(int index)
@@ -61,6 +74,8 @@ public class MenuController : MonoBehaviour
         Debug.Log("Load Game" + index);
         string gamesave = File.ReadAllText($"{Application.persistentDataPath}/save{index}.json", System.Text.Encoding.UTF8);
         GameSave loadedfile = JsonUtility.FromJson<GameSave>(gamesave);
+        Debug.Log(Application.persistentDataPath);
         GlobalGameState.currentGame = loadedfile;
+        SceneManager.LoadScene(GlobalGameState.currentGame.scene);
     }
 }

@@ -30,6 +30,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
                 if (seaMovement.isActiveAndEnabled == true)
                 {
                     animator.SetBool("InWater", true);
+
                 }
 
                 else if (seaMovement.isActiveAndEnabled == false)

@@ -14,13 +14,14 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject noSavedGameDialogue = null;
     [SerializeField] private SaveSlotButton[] savebuttons;
 
+    int save;
 
     public void Start()
     {
 
         for(int index = 0; index < savebuttons.Length; index++)
         {
-            savebuttons[index].Initialize(index, CreateGame, LoadGame);
+            savebuttons[index].Initialize(index, GameNotExist, GameExists);
         }
     }
     public void NewGameDialogueYes()
@@ -45,34 +46,42 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
     }
-    /*
+    
     public void GameExists(int index)
     {
         ExistingFileMenu.SetActive(true);
+        save = index;
     }
 
     public void GameNotExist(int index)
     {
         NewFileMenu.SetActive(true);
+        save = index;
     }
-    */
-    public void CreateGame(int index)
+    
+    public void Clearsave()
     {
-        Debug.Log("Create Game" + index);
+        save = -1;
+    }
+
+
+    public void CreateGame()
+    {
+        Debug.Log("Create Game" + save);
         GameSave newGame = new GameSave();
-        newGame.SaveSlotIndex = index;
+        newGame.SaveSlotIndex = save;
         newGame.setupNewGame();
         string json = JsonUtility.ToJson(newGame);
-        File.WriteAllText($"{Application.persistentDataPath}/save{index}.json", json);
+        File.WriteAllText($"{Application.persistentDataPath}/save{save}.json", json);
         GlobalGameState.currentGame = newGame;
         Debug.Log(_newGameLevel);
         SceneManager.LoadScene(_newGameLevel);
     }
 
-    public void LoadGame(int index)
+    public void LoadGame()
     {
-        Debug.Log("Load Game" + index);
-        string gamesave = File.ReadAllText($"{Application.persistentDataPath}/save{index}.json", System.Text.Encoding.UTF8);
+        Debug.Log("Load Game" + save);
+        string gamesave = File.ReadAllText($"{Application.persistentDataPath}/save{save}.json", System.Text.Encoding.UTF8);
         GameSave loadedfile = JsonUtility.FromJson<GameSave>(gamesave);
         Debug.Log(Application.persistentDataPath);
         GlobalGameState.currentGame = loadedfile;

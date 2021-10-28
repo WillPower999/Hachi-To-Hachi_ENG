@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GainHealth : MonoBehaviour
 {
-    public void sendHealth(int health)
+    public void onTriggerEnter()
     {
-        PlayerHealth playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        playerStats.GainHealth(health);
+        GlobalGameState.currentGame.health++;
+        Destroy(this);
     }
 }

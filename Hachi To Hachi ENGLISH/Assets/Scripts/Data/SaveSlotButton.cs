@@ -8,13 +8,13 @@ public class SaveSlotButton : MonoBehaviour
 {
     private Action<int> OnClickCallBack;
     private int index;
-    public void Initialize(int index, Action<int> CreateGame, Action<int> LoadGame)
+    public void Initialize(int index, Action<int> GameNotExist, Action<int> GameExists)
     {
         this.index = index;
         if (File.Exists($"{Application.persistentDataPath}/save{index}.json"))
-            OnClickCallBack = LoadGame;
+            OnClickCallBack = GameExists;
         else
-            OnClickCallBack = CreateGame;
+            OnClickCallBack = GameNotExist;
     }
 
     public void OnClick()

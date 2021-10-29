@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class EnemyProjectile : MonoBehaviour
 {
     public int timeStep = 0;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,17 +15,17 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Player")
         {
-            if (other.GetComponent<TestDummy>()) other.GetComponent<TestDummy>().health--;
+            //GlobalGameState.currentGame.health--;
             Destroy(this.gameObject);
         }
-        else if (other.tag != "Player" && other.gameObject.layer != 4)
+        else if (other.tag != "Enemy" && other.gameObject.layer != 4)
         {
             Destroy(this.gameObject);
         }
@@ -45,7 +45,7 @@ public class Projectile : MonoBehaviour
 
     IEnumerator Clock()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(8);
         Destroy(this.gameObject);
     }
 }

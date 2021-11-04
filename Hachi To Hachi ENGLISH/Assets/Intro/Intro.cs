@@ -12,7 +12,7 @@ public class Intro : MonoBehaviour
     private int _index;
     public Image image;
     public TextMeshProUGUI text;
-    public Image cover;
+    //public Image cover;
     public int _time;
 
     public Button button;
@@ -52,7 +52,7 @@ public class Intro : MonoBehaviour
     private IEnumerator End()
     {
         yield return new WaitForSeconds(1);
-        cover.DOFade(1, 2);
+        //cover.DOFade(1, 2);
         yield return new WaitForSeconds(2);
         LoadMenu();
     }

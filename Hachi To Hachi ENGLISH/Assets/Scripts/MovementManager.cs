@@ -21,6 +21,8 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 
         public SimpleCharacterController playerScript;
 
+        public bool inkShotSelect = true;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -30,6 +32,15 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         // Update is called once per frame
         void Update()
         {
+            if (Input.GetAxis("Mouse ScrollWheel") != 0f && inkShotSelect == true)
+            {
+                inkShotSelect = false;
+            }
+            else if (Input.GetAxis("Mouse ScrollWheel") != 0f && inkShotSelect == false)
+            {
+                inkShotSelect = true;
+            }
+
             if (Input.GetKeyDown(KeyCode.V))
             {
                 if (movementMode == "Land" && playerScript.verticalSpeed == 0f)
@@ -37,6 +48,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
                     targetCamera.gameObject.GetComponent<OrbitingCamera>().target = beeTarget;
                     movementMode = "Sky";
                     Octo.GetComponent<SimpleCharacterController>().enabled = false;
+                    Octo.GetComponent<HachiAnimator>().mover.isInWalkMode = false;
                     Bee.GetComponent<SkyMovement>().enabled = true;
 
                     beeBody.GetComponent<SphereCollider>().enabled = true;
@@ -50,10 +62,13 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
                     targetCamera.gameObject.GetComponent<OrbitingCamera>().target = octoTarget;
                     movementMode = "Land";
                     Octo.GetComponent<SimpleCharacterController>().enabled = true;
+                    Octo.GetComponent<HachiAnimator>().mover.isInWalkMode = true;
                     Bee.GetComponent<SkyMovement>().enabled = false;
 
                     beeBody.GetComponent<SphereCollider>().enabled = false;
                     beeHead.GetComponent<BoxCollider>().enabled = false;
+
+                    inkShotSelect = true;
                 }
             }
         }

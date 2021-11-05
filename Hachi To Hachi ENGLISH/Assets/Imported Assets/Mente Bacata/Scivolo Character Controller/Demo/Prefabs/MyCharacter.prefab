@@ -175,6 +175,7 @@ MonoBehaviour:
   beeHead: {fileID: 0}
   targetCamera: {fileID: 0}
   playerScript: {fileID: 2573877700867721432}
+  inkShotSelect: 1
 --- !u!1 &2573877700536488798
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2573877700600175663
 Transform:
   m_ObjectHideFlags: 0
@@ -440,7 +441,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1716818341900601467}
   animator: {fileID: 5366216353379371195}
-  mag: 0
+  mover: {fileID: 2573877700867721428}
+  detector: {fileID: 2573877700867721433}
+  seaMovement: {fileID: 1045832472}
+  SimpleCharacterController: {fileID: 2573877700867721432}
 --- !u!1 &2573877701323496191
 GameObject:
   m_ObjectHideFlags: 0

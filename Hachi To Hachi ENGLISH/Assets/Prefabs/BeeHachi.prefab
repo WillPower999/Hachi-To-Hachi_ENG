@@ -82,6 +82,7 @@ MonoBehaviour:
   honeyDrop: {fileID: 954655641603979965, guid: c1955fd4198b06b4198ec084d29520fe, type: 3}
   movement: {fileID: 0}
   velocity: 20
+  meleeBox: {fileID: 8493404472741636361}
 --- !u!1 &5723230743429469300
 GameObject:
   m_ObjectHideFlags: 0

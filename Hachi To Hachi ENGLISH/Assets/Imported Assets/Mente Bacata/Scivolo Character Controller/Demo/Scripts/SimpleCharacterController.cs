@@ -41,6 +41,10 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 
         public float diff = 0;
 
+        private float downTime, pressTime = 0;
+        private bool ready = false;
+        private float countDown = 2.0f;
+
         private void Start()
         {
             cameraTransform = Camera.main.transform;
@@ -68,11 +72,33 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 
             SetGroundedIndicatorColor(isGrounded);
 
-            if (isGrounded && Input.GetButtonDown("Jump"))
+            if (isGrounded && Input.GetKeyDown(KeyCode.LeftControl) && ready == false)
             {
-                verticalSpeed = jumpSpeed;
+                downTime = Time.time;
+                pressTime = downTime + countDown;
+                ready = true;
+            }
+            if (Input.GetKeyUp(KeyCode.LeftControl))
+            {
+                ready = false;
+                downTime = 0f;
+            }
+
+            if (isGrounded && Input.GetKeyDown(KeyCode.Space))//GetButtonDown("Jump"))
+            {
+                if (Time.time >= pressTime && ready == true)
+                {
+                    verticalSpeed = jumpSpeed * 2;
+                    Debug.Log("Tentaspring!");
+                }
+                else
+                {
+                    verticalSpeed = jumpSpeed;
+                }
                 nextUngroundedTime = -1f;
                 isGrounded = false;
+                ready = false;
+                downTime = 0f;
             }
 
             if (isGrounded)

@@ -59,9 +59,8 @@ public class NiriktenScript : MonoBehaviour
     IEnumerator shoot()
     {
         yield return new WaitForSeconds(0.5f);
-        GameObject projectile = Instantiate(fireball, transform.position + new Vector3(0f, 1f, 0f), transform.rotation);
-        projectile.GetComponent<Rigidbody>().velocity = (target.transform.position - transform.position).normalized * 20f;
-        //projectile.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward * 20f);
+        GameObject projectile = Instantiate(fireball, transform.position, transform.rotation);
+        projectile.GetComponent<Rigidbody>().velocity = (target.transform.position + new Vector3(0f, 1f, 0f) - transform.position).normalized * 20f;
         yield return new WaitForSeconds(1f);
         timeToHit = true;
     }

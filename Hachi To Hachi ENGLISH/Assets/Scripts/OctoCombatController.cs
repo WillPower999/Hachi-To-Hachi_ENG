@@ -25,9 +25,12 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 
             if (Input.GetMouseButtonDown(1) && mode != "Sky")
             {
-                GameObject projectile = Instantiate(inkShot, transform.position + new Vector3(0f, 1f, 0f),
-                                                          transform.rotation);
-                projectile.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward * velocity);
+                if (movement.GetComponent<MovementManager>().inkShotSelect == true || mode == "Sea")
+                {
+                    GameObject projectile = Instantiate(inkShot, transform.position + new Vector3(0f, 1f, 0f),
+                                                              transform.rotation);
+                    projectile.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward * velocity);
+                }
             }
 
             if (Input.GetMouseButtonDown(0) && mode != "Sky")

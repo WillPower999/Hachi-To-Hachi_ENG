@@ -38,22 +38,13 @@ public class DayNightManager : MonoBehaviour
 
         if (DirectionalLight != null)
         {
-            DirectionalLight.transform.localRotation = Quaternion.Euler(new Vector3((timePercent * 360f) - 90f, 170f, 0));
+            DirectionalLight.transform.localRotation = Quaternion.Euler(new Vector3((timePercent * 360f) - 90f, 80f, 0));
         }
-    }
-
-    private void OnValidate()
-    {
-        if (DirectionalLight != null)
-            return;
     }
 
     private IEnumerator NightSkip()
     {
         yield return new WaitForSeconds(NightFastForwardInSeconds);
         TimeOfDay = Dawn;
-
     }
-    
-
 }

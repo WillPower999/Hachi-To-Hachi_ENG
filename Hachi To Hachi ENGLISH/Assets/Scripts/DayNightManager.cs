@@ -52,6 +52,7 @@ public class DayNightManager : MonoBehaviour
     {
         yield return new WaitForSeconds(NightFastForwardInSeconds);
         TimeOfDay = Dawn;
+
     }
     
 

@@ -29,7 +29,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
                 {
                     GameObject projectile = Instantiate(inkShot, transform.position + new Vector3(0f, 1f, 0f),
                                                               transform.rotation);
-                    projectile.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward * velocity);
+                    projectile.GetComponent<Rigidbody>().velocity = transform.TransformDirection((Vector3.forward * 2 + (Vector3.up / 4)) * velocity);
                 }
             }
 

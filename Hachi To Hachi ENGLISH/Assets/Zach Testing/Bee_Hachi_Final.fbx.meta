@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: d55007b71922c9744bd202c3e8f716a3
+guid: 587035b659ed5ba4db31d4e288ee9ca2
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Fly
+    second: Take 001
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -26,7 +26,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Fly
+      name: Take 001
       takeName: Take 001
       internalID: 0
       firstFrame: 0
@@ -48,7 +48,7 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
-      loopBlendOrientation: 1
+      loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
@@ -66,7 +66,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 8
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -104,12 +104,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - 42047bbc29e397145a484d6408557ecb
-  - bb6966d67935ea1458ebbbf7fa714819
-  - d2381138a24a85948ab679de5769df33
-  - cbdae8d19f82ecb4691bf48f703080fb
-  - d00efaa8e76fba248b42fbf7e92ded46
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -122,7 +117,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 10
+    globalScale: 8
     rootMotionBoneName: Root
     hasTranslationDoF: 0
     hasExtraRoot: 0

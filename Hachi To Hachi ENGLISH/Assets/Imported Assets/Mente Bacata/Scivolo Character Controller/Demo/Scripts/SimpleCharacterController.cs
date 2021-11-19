@@ -59,7 +59,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
             {
                 diff = Vector3.Distance(this.gameObject.transform.position, bee.transform.position);
                 diff = diff / 200;
-                bee.transform.position = Vector3.MoveTowards(bee.transform.position, this.gameObject.transform.position + new Vector3(0f, 2.5f, 0f), 20f * Time.deltaTime + diff);
+                bee.transform.position = Vector3.MoveTowards(bee.transform.position, this.gameObject.transform.position + new Vector3(0f, 2.25f, 0f), 20f * Time.deltaTime + diff);
             }
         }
 

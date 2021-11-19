@@ -172,7 +172,6 @@ MonoBehaviour:
   octoTarget: {fileID: 2573877700536488799}
   beeTarget: {fileID: 0}
   beeBody: {fileID: 0}
-  beeHead: {fileID: 0}
   targetCamera: {fileID: 0}
   playerScript: {fileID: 2573877700867721432}
   inkShotSelect: 1

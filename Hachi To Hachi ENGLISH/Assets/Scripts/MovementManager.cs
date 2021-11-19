@@ -15,7 +15,6 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         public Transform beeTarget;
 
         public GameObject beeBody;
-        public GameObject beeHead;
 
         public Camera targetCamera;
 
@@ -52,7 +51,6 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
                     Bee.GetComponent<SkyMovement>().enabled = true;
 
                     beeBody.GetComponent<SphereCollider>().enabled = true;
-                    beeHead.GetComponent<BoxCollider>().enabled = true;
 
                     Octo.GetComponent<Rigidbody>().isKinematic = true;
                     Octo.GetComponent<Rigidbody>().useGravity = true;
@@ -66,7 +64,6 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
                     Bee.GetComponent<SkyMovement>().enabled = false;
 
                     beeBody.GetComponent<SphereCollider>().enabled = false;
-                    beeHead.GetComponent<BoxCollider>().enabled = false;
 
                     inkShotSelect = true;
                 }

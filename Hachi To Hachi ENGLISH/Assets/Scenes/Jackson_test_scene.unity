@@ -811,11 +811,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5723230743429469303, guid: f02cbdc8b96f6264590b3359bc2647ad, type: 3}
   m_PrefabInstance: {fileID: 5723230743640679905}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &510254675 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5723230743537515442, guid: f02cbdc8b96f6264590b3359bc2647ad, type: 3}
-  m_PrefabInstance: {fileID: 5723230743640679905}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &545585946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1238,10 +1233,6 @@ PrefabInstance:
       propertyPath: beeBody
       value: 
       objectReference: {fileID: 592324154}
-    - target: {fileID: 2119006273, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
-      propertyPath: beeHead
-      value: 
-      objectReference: {fileID: 510254675}
     - target: {fileID: 2119006273, guid: a84e11ee423eace4aac65d32b52ee82f, type: 3}
       propertyPath: beeTarget
       value: 

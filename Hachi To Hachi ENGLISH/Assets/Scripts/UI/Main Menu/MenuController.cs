@@ -8,29 +8,34 @@ using System.IO;
 public class MenuController : MonoBehaviour
 {
     public string _newGameLevel;
+
     [Header("Pop Up Menus")]
     public GameObject ExistingFileMenu;
     public GameObject NewFileMenu;
-    [SerializeField] private GameObject noSavedGameDialogue = null;
-    [SerializeField] private SaveSlotButton[] savebuttons;
+    
+    [SerializeField]
+    private SaveSlotButton[] savebuttons;
 
     int save;
 
     public void Start()
     {
+        Debug.Log(Application.persistentDataPath);
 
-        for(int index = 0; index < savebuttons.Length; index++)
+        for (int index = 0; index < savebuttons.Length; index++)
         {
             savebuttons[index].Initialize(index, GameNotExist, GameExists);
         }
     }
     public void NewGameDialogueYes()
     {
+        Debug.Log($"New game {save}");
         SceneManager.LoadScene(_newGameLevel);
     }
 
     public void LoadGameDialogueYes()
     {
+        Debug.Log($"Load game {save}");
         /*if(there are saved files)
         {
         then ask which one;
@@ -49,12 +54,14 @@ public class MenuController : MonoBehaviour
     
     public void GameExists(int index)
     {
+        Debug.Log($"File found for {index}");
         ExistingFileMenu.SetActive(true);
         save = index;
     }
 
     public void GameNotExist(int index)
     {
+        Debug.Log($"No file found for {index}");
         NewFileMenu.SetActive(true);
         save = index;
     }

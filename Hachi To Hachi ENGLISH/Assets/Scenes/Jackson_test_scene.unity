@@ -2082,12 +2082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00facfe96ade98d4291d10e21a850f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Tester
-    sentences:
-    - Beep
-    - Boop
-    - Baap
+  convo: {fileID: 4900000, guid: 04b04ff34bf5b02409a3651df9d25d78, type: 3}
 --- !u!1 &1503392530
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -35,14 +36,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Queue<string> dialogue)
     {
         Cursor.lockState = CursorLockMode.Confined;
 
         isTalking = true;
-        characterName.text = dialogue.name;
         sentences.Clear();
-        foreach (string sentence in dialogue.sentences)
+        foreach (string sentence in dialogue)
         {
             sentences.Enqueue(sentence);
         }
@@ -58,6 +58,11 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
+        if (sentence.StartsWith("["))
+        {
+            characterName.text = sentence.Substring(1, sentence.IndexOf(']') - 1);
+            sentence = sentence.Substring(sentence.IndexOf(']') + 1);
+        }
         dialogueText.text = sentence;
     }
 

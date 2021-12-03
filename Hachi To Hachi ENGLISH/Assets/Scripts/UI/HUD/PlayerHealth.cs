@@ -8,7 +8,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        GlobalGameState.currentGame.health -= damage;
+        //GlobalGameState.currentGame.health -= damage;
+        healthbar.UpdateUI();
     }
 
     public void GainHealth(int heal)

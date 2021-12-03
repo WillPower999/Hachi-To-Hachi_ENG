@@ -23,6 +23,8 @@ public class EnemyProjectile : MonoBehaviour
         if (other.tag == "Player")
         {
             //GlobalGameState.currentGame.health--;
+            print("hurt");
+            FindObjectOfType<PlayerHealth>().TakeDamage(1);
             Destroy(this.gameObject);
         }
         else if (other.tag != "Enemy" && other.gameObject.layer != 4)

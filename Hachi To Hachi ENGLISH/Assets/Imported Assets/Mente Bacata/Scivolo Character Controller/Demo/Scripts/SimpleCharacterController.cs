@@ -8,7 +8,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 {
     public class SimpleCharacterController : MonoBehaviour
     {
-        public float moveSpeed = 8f;
+        private float moveSpeed = 10f;
 
         public float jumpSpeed = 8f;
         
@@ -45,6 +45,10 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         private bool ready = false;
         private float countDown = 2.0f;
 
+        private bool isSprint = false;
+        private float buttonCooler = 0.5f;
+        private int buttonCount = 0;
+
         private void Start()
         {
             cameraTransform = Camera.main.transform;
@@ -71,6 +75,47 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
             bool groundDetected = DetectGroundAndCheckIfGrounded(out bool isGrounded, out GroundInfo groundInfo);
 
             SetGroundedIndicatorColor(isGrounded);
+
+            /*if (Input.GetKeyDown(KeyCode.LeftShift))
+            {*/
+                if (isSprint)
+                {
+                    moveSpeed = 18f;
+                    //isSprint = false;
+                }
+                else
+                {
+                    moveSpeed = 10f;
+                    //isSprint = true;
+                }
+            //}
+
+            if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+            {
+
+                if (buttonCooler > 0 && buttonCount == 1/*Number of Taps you want Minus One*/)
+                {
+                    isSprint = true;
+                }
+                else
+                {
+                    buttonCooler = 0.5f;
+                    buttonCount += 1;
+                }
+            }
+
+            if (buttonCooler > 0)
+            {
+
+                buttonCooler -= 1 * Time.deltaTime;
+
+            }
+            else
+            {
+                buttonCount = 0;
+            }
+
+            if (velocity.magnitude < 4) isSprint = false;
 
             if (isGrounded && Input.GetKeyDown(KeyCode.LeftControl) && ready == false)
             {

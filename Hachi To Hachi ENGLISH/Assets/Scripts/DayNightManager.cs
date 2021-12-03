@@ -5,9 +5,13 @@ using System.Collections;
 public class DayNightManager : MonoBehaviour
 {
     public Gradient AmbientColor;
+    [SerializeField] public Skybox Day;
+    [SerializeField] public Skybox Night;
+    [SerializeField] public Skybox Awnusk;
     [SerializeField] private Light DirectionalLight;
     [SerializeField, Range(0, 24)] private float TimeOfDay;
     [SerializeField] public float slownessMultiplier;
+    [SerializeField] private float Daytime;
     [SerializeField] private float Dawn;
     [SerializeField] private float Dusk;
     [SerializeField] private float NightFastForwardInSeconds;
@@ -25,11 +29,22 @@ public class DayNightManager : MonoBehaviour
         {
             UpdateLighting(TimeOfDay / 24f);
         }
-        
-        if(TimeOfDay < Dawn || TimeOfDay > Dusk)
+
+        if (TimeOfDay < Dawn || TimeOfDay > Dusk)
         {
             StartCoroutine(NightSkip());
+            //Global.Skybox.material = Night;
+
         }
+        else if (TimeOfDay < Daytime || TimeOfDay > Daytime && TimeOfDay > Dawn || TimeOfDay < Dusk)
+        {
+            //Skybox.material = Awnusk;
+        }
+        else;
+        {
+            //Skybox.material = Day;
+        }
+        
     }
 
     private void UpdateLighting(float timePercent)

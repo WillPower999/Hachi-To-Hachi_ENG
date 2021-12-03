@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
             if (other.GetComponent<TestDummy>()) other.GetComponent<TestDummy>().health--;
             Destroy(this.gameObject);
         }
-        else if (other.tag != "Player" && other.gameObject.layer != 4)
+        else if (other.tag != "Player" && other.gameObject.layer != 4 && !other.GetComponent<Projectile>())
         {
             Destroy(this.gameObject);
         }

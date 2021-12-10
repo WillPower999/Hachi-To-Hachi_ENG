@@ -45,11 +45,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _soundEffects:
   - _soundOption: 0
-    _clip: {fileID: 8300000, guid: efc9139c6b508a744b0da0734108f34c, type: 3}
+    _clip: {fileID: 8300000, guid: 29303324e3ea4f34994a3d740f1e6718, type: 3}
   - _soundOption: 1
     _clip: {fileID: 8300000, guid: c2c8c465c28b2d841917d9e71da2bef2, type: 3}
   - _soundOption: 2
     _clip: {fileID: 8300000, guid: fb8cf569a96da0d4eae38f7d8fed8f17, type: 3}
+  - _soundOption: 3
+    _clip: {fileID: 8300000, guid: efc9139c6b508a744b0da0734108f34c, type: 3}
+  - _soundOption: 4
+    _clip: {fileID: 8300000, guid: fb8cf569a96da0d4eae38f7d8fed8f17, type: 3}
+  - _soundOption: 5
+    _clip: {fileID: 8300000, guid: fb8cf569a96da0d4eae38f7d8fed8f17, type: 3}
+  - _soundOption: 6
+    _clip: {fileID: 8300000, guid: fec3b96679abf454aa8412f74a78788b, type: 3}
+  - _soundOption: 7
+    _clip: {fileID: 8300000, guid: fec3b96679abf454aa8412f74a78788b, type: 3}
   _musicTracks:
   - _musicOption: 0
     _track: {fileID: 8300000, guid: 227d8c65077bcfd478843bc564ce02fd, type: 3}

@@ -5,9 +5,9 @@ using System.Collections;
 public class DayNightManager : MonoBehaviour
 {
     public Gradient AmbientColor;
-    [SerializeField] public Skybox Day;
-    [SerializeField] public Skybox Night;
-    [SerializeField] public Skybox Awnusk;
+    [SerializeField] public Material Day;
+    [SerializeField] public Material Night;
+    [SerializeField] public Material Awnusk;
     [SerializeField] private Light DirectionalLight;
     [SerializeField, Range(0, 24)] private float TimeOfDay;
     [SerializeField] public float slownessMultiplier;

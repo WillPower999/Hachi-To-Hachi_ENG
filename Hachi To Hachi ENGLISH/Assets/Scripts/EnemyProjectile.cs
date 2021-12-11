@@ -20,12 +20,13 @@ public class EnemyProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && HealthBarV2.Instance != null)
         {
             //GlobalGameState.currentGame.health--;
             print("hurt");
-            FindObjectOfType<PlayerHealth>().TakeDamage(1);
+            //FindObjectOfType<PlayerHealth>().TakeDamage(1);
             Destroy(this.gameObject);
+            HealthBarV2.Instance.DeductHealth();
         }
         else if (other.tag != "Enemy" && other.gameObject.layer != 4)
         {

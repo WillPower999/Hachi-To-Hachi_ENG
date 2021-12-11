@@ -5,44 +5,21 @@ using DG.Tweening;
 
 public class Daifuku : Collectible
 {
-    public Vector3 rotationDirection;
-    public float rotationSpeed;
-    private float _initialYPosition;
-    public float bobDistance;
-    public float bobDuration;
-    public Ease ease;
+    //public override void GetCollected()
+    //{
+    //    if (canCollect)
+    //    {
+    //        //Handle updating coin UI here.
+    //        canCollect = true;
+    //        print("Got Coin");
+    //        DaifukuManager.Instance.collectSound.Play();
+    //        DaifukuManager.Instance.IncrementCollectedCoinCount();
 
-    private bool _canCollect;
+    //        if (HealthBarV2.Instance != null)
+    //        {
+    //            HealthBarV2.Instance.AddHealth();
+    //        }
+    //    }
+    //}
 
-    private void Start()
-    {
-        _canCollect = true;
-        StartCoroutine(BobCo());
-        _initialYPosition = transform.position.y;
-    }
-    public override void GetCollected()
-    {
-        if (_canCollect)
-        {
-            //Handle updating coin UI here.
-            _canCollect = true;
-            print("Got Coin");
-            DaifukuManager.Instance.collectSound.Play();
-            DaifukuManager.Instance.IncrementCollectedCoinCount();
-        }
-    }
-
-    private void Update()
-    {
-        transform.Rotate(rotationDirection * rotationSpeed * Time.deltaTime);
-    }
-
-    private IEnumerator BobCo()
-    {
-        transform.DOMoveY(_initialYPosition + bobDistance, bobDuration).SetEase(ease);
-        yield return new WaitForSeconds(bobDuration);
-        transform.DOMoveY(_initialYPosition - bobDistance, bobDuration).SetEase(ease);
-        yield return new WaitForSeconds(bobDuration);
-        StartCoroutine(BobCo());
-    }
 }

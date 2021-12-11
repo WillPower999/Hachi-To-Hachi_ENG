@@ -92,10 +92,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8924015973841788360}
   - component: {fileID: 7932882404060293695}
-  - component: {fileID: 4213436835401116438}
-  - component: {fileID: 8112013805609813885}
+  - component: {fileID: 7410237253857303956}
   m_Layer: 0
-  m_Name: Collectible
+  m_Name: Collectible - Daifuku
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +129,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.8017372
   m_Center: {x: -0.003791809, y: 0.17812121, z: 0.2523507}
---- !u!114 &4213436835401116438
+--- !u!114 &7410237253857303956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,26 +138,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 8112013805609813874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b5fc1db69cb8ee48b5af9877511c5ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8112013805609813885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8112013805609813874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9879ba8ba475de4282081a9ab03c243, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a6e6cbc841a15744b8ee91f47fe9ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotationDirection: {x: 0, y: 1, z: 0}
-  rotationSpeed: 1
-  bobDistance: 1
+  rotationSpeed: 60
+  bobDistance: 0.5
   bobDuration: 1
-  ease: 0
+  ease: 7
+  canCollect: 0
+  collectSound: {fileID: 8300000, guid: 880b5495b25eb2b499c9c0f41ec859a2, type: 3}
+  activeType: 0
 --- !u!1 &8637521241877448775
 GameObject:
   m_ObjectHideFlags: 0

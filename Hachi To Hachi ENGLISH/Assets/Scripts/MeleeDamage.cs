@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MenteBacata.ScivoloCharacterControllerDemo;
 
 public class MeleeDamage : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class MeleeDamage : MonoBehaviour
         if (other.GetComponent<TestDummy>() == true)
         {
             other.GetComponent<TestDummy>().health--;
+        }
+
+        if (other.tag == "Player" && HealthBarV2.Instance != null)
+        {
+            HealthBarV2.Instance.DeductHealth();
         }
     }
 }

@@ -10,12 +10,14 @@ public class HealthBarV2 : MonoBehaviour
     public List<GameObject> healthIcons;
     public int _maxHealth;
     public int _currentHealth;
+    private bool _canTakeDamage;
 
     void Awake()
     {
         Instance = this;
         _maxHealth = healthIcons.Count;
         _currentHealth = _maxHealth;
+        _canTakeDamage = true;
     }
 
     //ONLY FOR TESTING
@@ -51,7 +53,9 @@ public class HealthBarV2 : MonoBehaviour
 
     public void DeductHealth()
     {
-        if (_currentHealth > 0)
+        if (!_canTakeDamage) return;
+
+        if (_currentHealth > 1)
         {
             _currentHealth--;
 
@@ -64,10 +68,19 @@ public class HealthBarV2 : MonoBehaviour
             {
                 healthIcons[i].SetActive(true);
             }
+
+            StartCoroutine(DeductHealthBuffer());
         }
         else
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    private IEnumerator DeductHealthBuffer()
+    {
+        _canTakeDamage = false;
+        yield return new WaitForSeconds(.5f);
+        _canTakeDamage = true;
     }
 }

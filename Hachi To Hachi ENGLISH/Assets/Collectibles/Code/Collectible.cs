@@ -68,13 +68,12 @@ public class Collectible : MonoBehaviour
             }
             else if (activeType == CollectibleType.Squeal)
             {
-
+                CollectibleManager.Instance.HandleSquealCollected(gameObject);
             }
             else if (activeType == CollectibleType.Brick)
             {
-
+                CollectibleManager.Instance.HandleBrickCollected();
             }
-
             if (CollectibleManager.Instance != null)
             {
                 CollectibleManager.Instance.PlayCollectSound(collectSound);

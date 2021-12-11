@@ -232,11 +232,11 @@ PrefabInstance:
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 5763ce196af9cbe46ace323c6062d3b7, type: 3}
+      objectReference: {fileID: 21300000, guid: 8a102700743bc4d4f8340430e87cdff5, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: ad8288752ed9e854296504493ee2c429, type: 3}
+      objectReference: {fileID: 21300000, guid: ade785e84b59c3548848418775c3f696, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[2]
       value: 
@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b38f1555bc2bc5246a7c1a87e231e51c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3e0f924b231d3c4ba5f4b82223e794c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

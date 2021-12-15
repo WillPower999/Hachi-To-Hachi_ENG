@@ -8,6 +8,7 @@ using System.IO;
 public class MenuController : MonoBehaviour
 {
     public string _newGameLevel;
+    public string _credits;
 
     [Header("Pop Up Menus")]
     public GameObject ExistingFileMenu;
@@ -51,6 +52,12 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void CreditsButton()
+    {
+        SceneManager.LoadScene(_credits);
+    }
+
     
     public void GameExists(int index)
     {

@@ -15,8 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/beta_eitto.unity
     guid: 137b99c17ce0a72498e69673e9398a6f
   - enabled: 1
-    path: Assets/PageCurl/UnityBookPageCurl-master/Assets/Book-Page Curl/Example/scenes/Example_1_Basic
-      Book.unity
+    path: Assets/PageCurl/UnityBookPageCurl-master/Assets/Book-Page Curl/Example/scenes/credits.unity
     guid: d3f5912676a6d8b4fa852d1305cd3814
   - enabled: 1
     path: Assets/Scenes/beta_level.unity

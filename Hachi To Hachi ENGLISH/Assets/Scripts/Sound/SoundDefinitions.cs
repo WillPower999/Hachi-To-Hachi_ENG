@@ -18,5 +18,6 @@ public enum Music {
     Level_1,
     Level_1_Swimming,
     Level_1_Flying,
-    KumesTheme
+    KumesTheme,
+    Credits
 }

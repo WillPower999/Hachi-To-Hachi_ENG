@@ -441,6 +441,7 @@ MonoBehaviour:
   images:
   - {fileID: 21300000, guid: 8c088ae433d02d64cb332317413b1309, type: 3}
   - {fileID: 21300000, guid: ee3229bf8c6ff9843987bb4f590c0b83, type: 3}
+  fadeTime: 0.5
   image: {fileID: 1357406093}
   text: {fileID: 400973613}
   _time: 4

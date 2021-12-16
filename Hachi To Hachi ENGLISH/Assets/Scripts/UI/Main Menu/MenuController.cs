@@ -101,4 +101,9 @@ public class MenuController : MonoBehaviour
         GlobalGameState.currentGame = loadedfile;
         SceneManager.LoadScene(GlobalGameState.currentGame.scene);
     }
+
+    public void LoadNewScene(int sceneToLoad)
+    {
+        SceneManager.LoadScene(sceneToLoad);
+    }
 }

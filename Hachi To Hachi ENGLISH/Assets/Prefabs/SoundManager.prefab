@@ -62,21 +62,23 @@ MonoBehaviour:
     _clip: {fileID: 8300000, guid: fec3b96679abf454aa8412f74a78788b, type: 3}
   _musicTracks:
   - _musicOption: 0
-    _track: {fileID: 8300000, guid: 227d8c65077bcfd478843bc564ce02fd, type: 3}
+    _track: {fileID: 8300000, guid: 7afbd7ea50e7bce4f95211cd38030f2b, type: 3}
   - _musicOption: 1
-    _track: {fileID: 8300000, guid: e5f7cd3e50a589e4fb6f1addb895501c, type: 3}
+    _track: {fileID: 8300000, guid: 7afbd7ea50e7bce4f95211cd38030f2b, type: 3}
   - _musicOption: 2
-    _track: {fileID: 8300000, guid: 3787c7bc60933544f8d96009601e7216, type: 3}
+    _track: {fileID: 8300000, guid: 5f0542491a9ef9d44bf79ab19aae4afb, type: 3}
   - _musicOption: 3
-    _track: {fileID: 8300000, guid: b102fc5c81227f24b89eec45876e3cc6, type: 3}
+    _track: {fileID: 8300000, guid: cc10dcaf25f80a040abd268e905ea54c, type: 3}
   - _musicOption: 4
-    _track: {fileID: 8300000, guid: cbc76b82f8ebd034ca3980ecd9cd89e2, type: 3}
-  - _musicOption: 5
     _track: {fileID: 8300000, guid: 8ab8b32d7ea9e8342a9a68ed6fac71f7, type: 3}
+  - _musicOption: 5
+    _track: {fileID: 8300000, guid: 3029d079ce1b93f42bf41e969e8427d4, type: 3}
   - _musicOption: 6
-    _track: {fileID: 8300000, guid: 19353388a6a8d9b4eae5d002730ea9d0, type: 3}
+    _track: {fileID: 8300000, guid: 124757869aefd1348b12ac77b0b6fec1, type: 3}
   - _musicOption: 7
-    _track: {fileID: 8300000, guid: cbd05bb26af281045b57df1d1d394703, type: 3}
+    _track: {fileID: 8300000, guid: ba64fa7e70fa31c4a99c7d44e2d5bc19, type: 3}
   - _musicOption: 8
-    _track: {fileID: 8300000, guid: 03fef43ce76cf914e8c5c34fd0da8e90, type: 3}
+    _track: {fileID: 8300000, guid: f19c5e3da0eb2104498989666cf145be, type: 3}
+  - _musicOption: 9
+    _track: {fileID: 8300000, guid: c7f8897f1ecee6e4a97747f7eef35792, type: 3}
   _numSoundEffectSources: 5

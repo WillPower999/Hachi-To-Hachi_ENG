@@ -40,7 +40,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
                 inkShotSelect = true;
             }
 
-            if (Input.GetKeyDown(KeyCode.V))
+            if (Input.GetKeyDown(KeyCode.B))
             {
                 if (movementMode == "Land" && playerScript.verticalSpeed == 0f)
                 {

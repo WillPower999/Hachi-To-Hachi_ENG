@@ -50,6 +50,7 @@ public class Book : MonoBehaviour {
     public Image Right;
     public Image RightNext;
     public UnityEvent OnFlip;
+    [SerializeField] GameObject button;
     float radius1, radius2;
     //Spine Bottom
     Vector3 sb;
@@ -340,8 +341,10 @@ public class Book : MonoBehaviour {
     public void OnMouseDragLeftPage()
     {
         if (interactable)
-        DragLeftPageToPoint(transformPoint(Input.mousePosition));
-        
+        {
+            button.SetActive(false);
+            DragLeftPageToPoint(transformPoint(Input.mousePosition));
+        }
     }
     public void OnMouseRelease()
     {
@@ -444,5 +447,17 @@ public class Book : MonoBehaviour {
         }
         if (onFinish != null)
             onFinish();
+    }
+
+    public void ShowButton()
+    {
+        if (currentPage == TotalPageCount)
+        {
+            button.SetActive(true);
+        }
+        else
+        {
+            button.SetActive(false);
+        }
     }
 }

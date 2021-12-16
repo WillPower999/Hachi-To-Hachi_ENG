@@ -8,6 +8,7 @@ using DG.Tweening;
 public class Intro : MonoBehaviour
 {
     [SerializeField] private List<Sprite> images;
+    [SerializeField] float fadeTime;
     //[SerializeField] private List<string> phrases;
     private int _index;
     public Image image;
@@ -29,7 +30,10 @@ public class Intro : MonoBehaviour
 
     private IEnumerator ShowSlides()
     {
+        image.DOFade(1, fadeTime);
         yield return new WaitForSeconds(_time);
+        image.DOFade(0, fadeTime);
+        yield return new WaitForSeconds(fadeTime);
         _index++;
         if (_index == images.Count)
         {

@@ -27,6 +27,8 @@ public class MenuController : MonoBehaviour
         {
             savebuttons[index].Initialize(index, GameNotExist, GameExists);
         }
+
+        SoundManager.Instance.PlayMusic(Music.TitleTheme);
     }
     public void NewGameDialogueYes()
     {

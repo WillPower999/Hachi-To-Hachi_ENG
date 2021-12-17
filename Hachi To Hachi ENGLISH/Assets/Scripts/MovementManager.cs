@@ -6,6 +6,10 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 {
     public class MovementManager : MonoBehaviour
     {
+        public Music _landMusic;
+        public Music _waterMusic;
+        public Music _skyMusic;
+
         public string movementMode = "Land";
 
         public GameObject Octo;
@@ -44,6 +48,8 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
             {
                 if (movementMode == "Land" && playerScript.verticalSpeed == 0f)
                 {
+                    SoundManager.Instance.PlayMusicCrossFaded(_skyMusic, 1f);
+
                     targetCamera.gameObject.GetComponent<OrbitingCamera>().target = beeTarget;
                     movementMode = "Sky";
                     Octo.GetComponent<SimpleCharacterController>().enabled = false;
@@ -57,6 +63,8 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
                 }
                 else if (movementMode == "Sky")
                 {
+                    SoundManager.Instance.PlayMusicCrossFaded(_landMusic, 1f);
+
                     targetCamera.gameObject.GetComponent<OrbitingCamera>().target = octoTarget;
                     movementMode = "Land";
                     Octo.GetComponent<SimpleCharacterController>().enabled = true;
@@ -82,6 +90,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
                 Octo.GetComponent<Rigidbody>().useGravity = false;
                 Octo.GetComponent<Rigidbody>().freezeRotation = true;
                 Octo.GetComponent<Rigidbody>().drag = 3f;
+                SoundManager.Instance.PlayMusicCrossFaded(_waterMusic, 1f);
             }
         }
 
@@ -93,6 +102,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
                 Octo.GetComponent<SimpleCharacterController>().enabled = true;
                 Octo.GetComponent<SeaMovement>().enabled = false;
 
+                SoundManager.Instance.PlayMusicCrossFaded(_landMusic, 1f);
                 //Octo.transform.position = Octo.transform.position + new Vector3(0f, 2f, 0f);
             }
         }

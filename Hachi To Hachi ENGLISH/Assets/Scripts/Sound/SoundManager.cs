@@ -56,6 +56,8 @@ public sealed class SoundManager : MonoBehaviour {
     private int _numSoundEffectSources = 5;
     private AudioSource[] _fxSources = null;
     private int _fxSourceIndex;
+    
+    private Music _currentMusic = Music.None;
 
     public SoundEffect[] SoundEffects {
         get {
@@ -110,7 +112,14 @@ public sealed class SoundManager : MonoBehaviour {
     }
 
     public void PlayMusic(Music track) {
-        if(_bgmSources[_bgmSourceIndex].isPlaying) {
+        if (_currentMusic == track)
+        {
+            return;
+        }
+
+        _currentMusic = track;
+
+        if (_bgmSources[_bgmSourceIndex].isPlaying) {
             _bgmSources[_bgmSourceIndex].Stop();
         }
 
@@ -118,6 +127,13 @@ public sealed class SoundManager : MonoBehaviour {
     }
 
     public void PlayMusicCrossFaded(Music track, float crossFadeTime) {
+        if(_currentMusic == track)
+        {
+            return;
+        }
+
+        _currentMusic = track;
+
         playMusicOnNextSource(track);
 
         _bgmStartCrossFadeTime = Time.time;

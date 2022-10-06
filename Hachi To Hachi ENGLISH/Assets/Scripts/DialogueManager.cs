@@ -24,20 +24,24 @@ public class DialogueManager : MonoBehaviour
     {
         if (isTalking == true)
         {
+            Debug.Log("isTalking = " + isTalking);
             dialogueCanvas.enabled = true;
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Debug.Log("key hit");
                 DisplayNextSentence();
             }
         }
         else
         {
+            Debug.Log("isTalking = " + isTalking);
             dialogueCanvas.enabled = false;
         }
     }
 
     public void StartDialogue(Queue<string> dialogue)
     {
+        Debug.Log("dialogue started");
         Cursor.lockState = CursorLockMode.Confined;
 
         isTalking = true;

@@ -13,6 +13,7 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
         public float loadTime;
         public GameObject setPosition;
         public destinationPortal portalSpawning;
+        public static int brickAmount;
 
         void OnTriggerEnter(Collider player)
         {
